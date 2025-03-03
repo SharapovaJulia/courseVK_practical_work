@@ -9,4 +9,5 @@ while sequence:= list(input().split()):
         max_from_the_sequence.append(max(sequence))
         count_sequence -= 1
 max_from_the_sequence.sort(reverse = True)
-print(max_from_the_sequence)
+max_from_the_sequence = [str(x) for x in max_from_the_sequence]
+print(';'.join(max_from_the_sequence))
