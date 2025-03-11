@@ -1,7 +1,11 @@
-import re
 answer = []
 string = input().lower()
-string = re.sub(r'[^a-z0-9\s]', '', string)
+symbols = '!,.?;:#$%^&*(),'
+
+for x in symbols:
+    if x in string:
+        string = string.replace(x, '')
+
 string_sorted = string.split(' ')
 for x in string_sorted:
     unique_symbols = set(x)
